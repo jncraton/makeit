@@ -50,7 +50,7 @@ let words = {
 
 function setWord(word) {
   document.getElementById('currentimg').innerHTML = '&#x' + words[word]
-  document.getElementById('current').innerHTML = word
+  document.getElementById('current').innerHTML = word.toUpperCase()
 }
 
 function setRandomWord() {
