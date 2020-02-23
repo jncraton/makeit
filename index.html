@@ -23,6 +23,17 @@ let words = {
   'bed': '1F6CC',
   'dog': '1F415',
   //'monkey': '1F412',
+  'cat': '1F408',
+  'unicorn': '1F984',
+  'pig': '1F437',
+  'pig nose': '1F43D',
+  'giraffe': '1F992',
+  'elephant': '1F418',
+  'rabbit': '1F407',
+  'skunk': '1F9A8',
+  'bird': '1F426',
+  'sauropod': '1F995',
+  'trex': '1F996',
 }
 
 function setWord(word) {
@@ -30,7 +41,9 @@ function setWord(word) {
   document.getElementById('current').innerHTML = word
 }
 
-setWord('monkey')
+wordlist = Object.entries(words).map((w) => w[0])
+
+setWord(wordlist[Math.floor(Math.random() * wordlist.length)]);
 </script>
 
 </body>
