@@ -40,9 +40,15 @@ function setWord(word) {
   document.getElementById('current').innerHTML = word
 }
 
-wordlist = Object.entries(words).map((w) => w[0])
+function setRandomWord() {
+  wordlist = Object.entries(words).map((w) => w[0])
+  setWord(wordlist[Math.floor(Math.random() * wordlist.length)])
+}
 
-setWord(wordlist[Math.floor(Math.random() * wordlist.length)]);
+document.getElementById('currentimg').addEventListener('click', () => {
+  setRandomWord()
+})
+setRandomWord()
 </script>
 
 </body>
