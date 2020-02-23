@@ -4,24 +4,31 @@
 body {
   max-width: 800px;
   margin: 0 auto;
-}
-
-#current { 
-  font-size: 256px;
   text-align: center;
 }
+
+#currentimg { font-size: 256px; }
+#current { font-size: 36px; }
 </style>
 </head>
 <body>
 
+<div id=currentimg></div>
 <div id=current></div>
+<div id=time></div>
 
 <script>
 let words = {
   'bathtub': '1F6C0',
+  'bed': '1F6CC',
 }
 
-document.getElementById('current').innerHTML = '&#x' + words.bathtub
+function setWord(word) {
+  document.getElementById('currentimg').innerHTML = '&#x' + words[word]
+  document.getElementById('current').innerHTML = word
+}
+
+setWord('bed')
 </script>
 
 </body>
