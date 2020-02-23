@@ -3,6 +3,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="manifest.json">
 <style>
 body {
   max-width: 800px;
@@ -94,6 +95,8 @@ document.getElementById('currentimg').addEventListener('click', () => {
 })
 setTime(0)
 setRandomWord()
+
+navigator.serviceWorker.register('service-worker.js')
 </script>
 
 </body>
