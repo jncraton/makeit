@@ -1,0 +1,28 @@
+<html>
+<head>
+<style>
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#current { 
+  font-size: 256px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div id=current></div>
+
+<script>
+let words = {
+  'bathtub': '1F6C0',
+}
+
+document.getElementById('current').innerHTML = '&#x' + words.bathtub
+</script>
+
+</body>
+</html>
