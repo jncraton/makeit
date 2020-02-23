@@ -11,7 +11,7 @@ body {
 }
 
 #currentimg { font-size: 256px; }
-#current { font-size: 36px; }
+#current,#time { font-size: 36px; }
 </style>
 </head>
 <body>
@@ -58,9 +58,23 @@ function setRandomWord() {
   setWord(wordlist[Math.floor(Math.random() * wordlist.length)])
 }
 
+let time = 0
+
+function setTime(val) {
+  time = val
+  document.getElementById('time').innerHTML = time
+}
+
+setInterval(() => {
+  time++
+  setTime(time)
+}, 1000)
+
 document.getElementById('currentimg').addEventListener('click', () => {
+  setTime(0)
   setRandomWord()
 })
+setTime(0)
 setRandomWord()
 </script>
 
